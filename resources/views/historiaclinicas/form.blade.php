@@ -39,6 +39,6 @@
   <textarea  type="text" name="descripcionhistoria" value="{{ isset($historiaclinica->descripcionhistoria)?$historiaclinica->descripcionhistoria:old('descripcion')}}" id="descripcionhistoria" rows="8"></textarea>
 </div>
 <br>
-<input type="submit" value="{{$modo}}">
+<input class="btn btn-outline-primary" type="submit" value="{{$modo}}">
 
-<a href="{{url('historiaclinicas/')}}">Volver</a>
+<a class="btn btn-outline-primary" href="{{url('historiaclinicas/')}}">Volver</a>

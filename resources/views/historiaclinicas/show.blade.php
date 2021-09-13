@@ -23,7 +23,7 @@
                     <td>{{$historiaclinica->doctor->nombredoctor}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/historiaclinicas">volver</a>
+            <a class="btn btn-outline-primary" href="/historiaclinicas">volver</a>
         </div>
     </div>
 

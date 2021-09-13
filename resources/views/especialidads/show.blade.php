@@ -11,7 +11,7 @@
                     <td>{{$especialidad->nombreespecialidad}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/especialidads/">volver</a>
+            <a class="btn btn-outline-primary" href="/especialidads/">volver</a>
         </div>
     </div>
 

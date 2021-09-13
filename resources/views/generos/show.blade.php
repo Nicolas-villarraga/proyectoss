@@ -11,7 +11,7 @@
                     <td>{{$genero->nombregenero}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/generos">volver</a>
+            <a class="btn btn-outline-primary" href="/generos">volver</a>
         </div>
     </div>
 

@@ -21,6 +21,6 @@
 <input type="text" name="nombreespecialidad" value="{{ isset($especialidad->nombreespecialidad)?$especialidad->nombreespecialidad:old('especialidad')}}" id="nombreespecialidad">
 <br>
 
-<input type="submit" value="{{$modo}}">
+<input  class="btn btn-outline-primary" type="submit" value="{{$modo}}">
 
-<a href="{{url('especialidads/')}}">Volver</a>
+<a class="btn btn-outline-primary" href="{{url('especialidads/')}}">Volver</a>

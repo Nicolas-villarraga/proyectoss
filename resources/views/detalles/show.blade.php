@@ -27,7 +27,7 @@
                     <td>{{$detalles->pedido->id}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/detalles/">volver</a>
+            <a class="btn btn-outline-primary" href="/detalles/">volver</a>
         </div>
     </div>
 

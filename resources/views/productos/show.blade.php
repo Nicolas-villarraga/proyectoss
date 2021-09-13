@@ -1,6 +1,6 @@
 
 
-@extends('layouts.app')
+@extends('adminlte::page')
 @section('content')
 <div class="container">
     <div class="row">
@@ -31,7 +31,7 @@
                     <td>{{$producto->proveedor->marcaproveedor}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/productos/">volver</a>
+            <a class="btn btn-outline-primary" href="/productos/">volver</a>
         </div>
     </div>
 

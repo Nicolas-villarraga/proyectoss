@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
 @endsection
 @section('content')
-<div class="container">
+<div class="container pt-5">
 
 
 
@@ -17,7 +17,7 @@
     </button>
 </div>
 
-<a href="{{url('pedidos/create')}}">Nueva Pedido</a>
+<a class="btn btn-outline-primary" href="{{url('pedidos/create')}}">Nueva Pedido</a>
 
 <table  id="pedido"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
@@ -39,17 +39,17 @@
             <td>{{$pedido->totalpedido}}</td>
             <td>{{$pedido->observacionespedido}}</td>
             <td>
-                <a href="{{url('/pedidos/'.$pedido->id.'/edit')}}">
+                <a class="btn btn-outline-primary" href="{{url('/pedidos/'.$pedido->id.'/edit')}}">
                     editar
                 </a>
                  | 
                 <form action="{{ url('/pedidos/'.$pedido->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
-                <a class="btn btn-outline-warning" href="{{url('/pedidos/'.$pedido->id)}}">detalle</a>
+                <a class="btn btn-outline-primary" href="{{url('/pedidos/'.$pedido->id)}}">detalle</a>
             </td>
         </tr>
         @endforeach

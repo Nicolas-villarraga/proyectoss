@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
 @endsection
 @section('content')
-<div class="container">
+<div class="container pt-5">
 
 
 
@@ -17,7 +17,7 @@
     </button>
 </div>
 
-<a class="btn btn-outline-warning" href="{{url('detalles/create')}}">Nuevo detalle</a>
+<a class="btn btn-outline-primary" href="{{url('detalles/create')}}">Nuevo detalle</a>
 
 <table  id="detalle"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">

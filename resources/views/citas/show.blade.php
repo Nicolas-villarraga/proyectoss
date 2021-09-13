@@ -31,7 +31,7 @@
                     <td>{{$cita->estado->nombreestado}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/citas/">volver</a>
+            <a class="btn btn-outline-primary" href="/citas/">volver</a>
         </div>
     </div>
 

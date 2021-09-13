@@ -1,6 +1,6 @@
 <h2>Detalle  de paciente</h2>
 
-@extends('layouts.app')
+@extends('adminlte::page')
 @section('content')
 <div class="container">
     <div class="row">
@@ -27,7 +27,7 @@
                     <td>{{$pedido->paciente->nombrepaciente}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/pedidos/">volver</a>
+            <a class="btn btn-outline-primary" href="/pedidos/">volver</a>
         </div>
     </div>
 

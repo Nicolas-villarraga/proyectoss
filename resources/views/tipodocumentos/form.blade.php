@@ -20,6 +20,6 @@
 <label for=nombredocumento">Nombre documento</label>
 <input type="text" name="nombredocumento" value="{{ isset($tipodocumento->nombredocumento)?$tipodocumento->nombredocumento:old('nombredocumento')}}" id="nombredocumento">
 <br>
-<input type="submit" value="{{$modo}}">
+<input class="btn btn-outline-primary" type="submit" value="{{$modo}}">
 
-<a href="{{url('tipodocumentos/')}}">Volver</a>
+<a class="btn btn-outline-primary" href="{{url('tipodocumentos/')}}">Volver</a>

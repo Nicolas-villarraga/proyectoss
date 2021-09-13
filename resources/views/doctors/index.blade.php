@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
 @endsection
 @section('content')
-<div class="container">
+<div class="container pt-5">
 
 
 
@@ -45,17 +45,17 @@
             <td>{{$doctor->correodoctor}}</td>
             <td>
                 
-                <a href="{{url('/doctors/'.$doctor->id.'/edit')}}">
+                <a class="btn btn-outline-primary"  href="{{url('/doctors/'.$doctor->id.'/edit')}}">
                     editar
                 </a>
                  | 
                 <form action="{{ url('/doctors/'.$doctor->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input  class="btn btn-outline-primary"  type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
-                <a href="{{url('/doctors/'.$doctor->id)}}">
+                <a  class="btn btn-outline-primary" href="{{url('/doctors/'.$doctor->id)}}">
                     Detalles
                 </a>
             </td>
@@ -74,11 +74,11 @@
     @endsection
 
 </table>
-<a class="btn btn-outline-warning" href="{{url('/citas/')}}">Citas</a>
-<a class="btn btn-outline-warning" href="{{url('/productos/')}}">inventario</a>
-<a class="btn btn-outline-warning" href="{{url('/historiaclinicas/')}}">Historias</a>
-<a class="btn btn-outline-warning" href="{{url('/pacientes/')}}">Pacientes</a>
-<a class="btn btn-outline-warning" href="{{url('/pedidos/')}}">Pedidos</a>
-<a class="btn btn-outline-warning" href="{{url('/proveedors/')}}">Proveedores</a>
+<a class="btn btn-outline-primary" href="{{url('/citas/')}}">Citas</a>
+<a class="btn btn-outline-primary" href="{{url('/productos/')}}">inventario</a>
+<a class="btn btn-outline-primary" href="{{url('/historiaclinicas/')}}">Historias</a>
+<a class="btn btn-outline-primary" href="{{url('/pacientes/')}}">Pacientes</a>
+<a class="btn btn-outline-primary" href="{{url('/pedidos/')}}">Pedidos</a>
+<a class="btn btn-outline-primary" href="{{url('/proveedors/')}}">Proveedores</a>
 </div>
 @endsection

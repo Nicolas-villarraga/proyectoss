@@ -1,7 +1,7 @@
 
 <h2>Pedidos
 </h2>
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 <div class="container">

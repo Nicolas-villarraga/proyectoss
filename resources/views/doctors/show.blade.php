@@ -41,7 +41,7 @@
                     <td>{{$doctor->Rol->nombrerol}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/doctors/">volver</a>
+            <a class="btn btn-outline-primary" href="/doctors/">volver</a>
         </div>
     </div>
 

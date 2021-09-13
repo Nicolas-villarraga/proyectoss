@@ -1,4 +1,6 @@
+
 @extends('adminlte::page')
+
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
@@ -6,7 +8,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container pt-5">
       <div class="alert alert-success alert-dismissible" role="alert">
             @if(Session::has('mensaje'))
             {{Session::get('mensaje')}}
@@ -16,7 +18,7 @@
             </button>
         </div> 
 
-<a class="btn btn-outline-warning" href="{{url('citas/create')}}">Nueva cita</a>
+<a class="btn btn-outline-primary" href="{{url('citas/create')}}">Nueva cita</a>
 
 <table id="cita" class="table table-striped table-bordered" style="width:100%">
     
@@ -43,16 +45,16 @@
             
             <td>
                 
-                <a class="btn btn-outline-warning "  href="{{url('/citas/'.$cita->id.'/edit')}}">
+                <a class="btn btn-outline-primary"  href="{{url('/citas/'.$cita->id.'/edit')}}">
                     editar
                 </a>
                 <form action="{{ url('/citas/'.$cita->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input  class="btn btn-outline-warning fl-1" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input  class="btn btn-outline-primary fl-1" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
-                <a class="btn btn-outline-warning" href="{{url('/citas/'.$cita->id)}}">Detalles</a>
+                <a class="btn btn-outline-primary" href="{{url('/citas/'.$cita->id)}}">Detalles</a>
             </td>
         </tr>
         
@@ -72,7 +74,7 @@
      </script>
  @endsection
 
-<a class="btn btn-outline-warning" href="{{url('/detalles/')}}">Detalle de Pedidos</a>
+<a class="btn btn-outline-primary" href="{{url('/detalles/')}}">Detalle de Pedidos</a>
 </div>
 
 @endsection

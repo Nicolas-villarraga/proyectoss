@@ -20,6 +20,6 @@
 <label for=nombreestado">Nombre</label>
 <input type="text" name="nombreestado" value="{{ isset($estado->nombreestado)?$estado->nombreestado:old('estado')}}" id="nombreestado">
 <br>
-<input type="submit" value="{{$modo}}">
+<input class="btn btn-outline-primary" type="submit" value="{{$modo}}">
 
-<a href="{{url('estados/')}}">Volver</a>
+<a class="btn btn-outline-primary" href="{{url('estados/')}}">Volver</a>

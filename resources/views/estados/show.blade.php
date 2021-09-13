@@ -11,7 +11,7 @@
                     <td>{{$estado->nombreestado}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-warning" href="/estados/">volver</a>
+            <a class="btn btn-outline-primary" href="/estados/">volver</a>
         </div>
     </div>
 

@@ -59,6 +59,6 @@
   @endforeach
 </select>
 <br>
-<input type="submit" class="btn btn-outline-warning" value="{{$modo}}">
+<input type="submit" class="btn btn-outline-primary" value="{{$modo}}">
 
-<a  class="btn btn-outline-warning" href="{{url('pacientes/')}}">Volver</a>
+<a  class="btn btn-outline-primary" href="{{url('pacientes/')}}">Volver</a>

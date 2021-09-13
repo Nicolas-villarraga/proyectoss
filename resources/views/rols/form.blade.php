@@ -20,6 +20,6 @@
 <label for=nombrerol">Rol</label>
 <input type="text" name="nombrerol" value="{{ isset($rol->nombrerol)?$rol->nombrerol:old('nombrerol')}}" id="nombrerol">
 <br>
-<input type="submit" value="{{$modo}}">
+<input class="btn btn-outline-primary" type="submit" value="{{$modo}}">
 
-<a href="{{url('rols/')}}">Volver</a>
+<a class="btn btn-outline-primary" href="{{url('rols/')}}">Volver</a>

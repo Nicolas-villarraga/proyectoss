@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Opticolombia</b>',
+    'logo_img' => 'vendor/adminlte/dist/img/logo_small.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -239,84 +239,64 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Buscar',
         ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+
         [
             'text'        => 'Bienvenido',
             'url'         => '/',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'icon'        => 'fab fa-ello',
+
         ],
         ['header' => 'Opciones'],
         [
-            'text' => 'Citas',
-            'url'  => '/citas',
-            'icon' => 'fab fa-accessible-icon',
+            'text' => 'Paciente',
+            'url'  => '/pacientes',
+            'icon' => 'far fa-calendar-plus',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'bx bx-notepad',
+            'text' => 'Historia clinica',
+            'url'  => '/historiaclinicas',
+            'icon' => 'fas fa-calendar-check',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Mas Opciones',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text'    => 'Citas',
+                    'url'     => '/citas',
+                    'icon'    =>'far fa-address-book',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text'    => 'Pedidos',
+                    'url'     => '/pedidos',
+                    'icon'    =>'fas fa-cash-register',
+                
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text'    => 'Proveedores',
+                    'url'     => '/proveedors',
+                    'icon'    =>'fas fa-diagnoses',
+                ],
+               
+                [
+                    'text'    => 'Detalles',
+                    'url'     => 'detalles',
+                    'icon'    =>'fas fa-edit',
+                ],
+               
+                [
+                    'text'    => 'Genero',
+                    'url'     => '/generos',
+                    'icon'    =>'far fa-address-book',
+                ],
+                [
+                    'text'    => 'Tipo de documentos',
+                    'url'     => '/tipodocumentos',
+                    'icon'    =>'far fa-address-book',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
         ],
     ],
 

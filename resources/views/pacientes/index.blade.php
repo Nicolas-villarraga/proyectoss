@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 
-<div class="container">
+<div class="container pt-5">
 <div class="alert alert-success alert-dismissible" role="alert">
     @if(Session::has('mensaje'))
     {{Session::get('mensaje')}}
@@ -15,7 +15,7 @@
     </button>
 </div>
 
-<a href="{{url('pacientes/create')}}">Nuevo paciente</a>
+<a  class="btn btn-outline-primary"  href="{{url('pacientes/create')}}">Nuevo paciente</a>
 
 <table  id="paciente"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
@@ -44,18 +44,18 @@
             <td>{{$paciente->correopaciente}}</td>
             <td>
                 
-                <a class="btn btn-outline-warning" href="{{url('/pacientes/'.$paciente->id.'/edit')}}">
+                <a class="btn btn-outline-primary" href="{{url('/pacientes/'.$paciente->id.'/edit')}}">
                     editar
                 </a>
                  | 
                 <form action="{{ url('/pacientes/'.$paciente->id) }}" method="post">
                 @csrf
                 @method('DELETE') 
-                <input class="btn btn-outline-warning" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
                 
-                <a class="btn btn-outline-warning" href="{{url('/pacientes/'.$paciente->id)}}">
+                <a class="btn btn-outline-primary" href="{{url('/pacientes/'.$paciente->id)}}">
                 Detalles
                 </a>
 

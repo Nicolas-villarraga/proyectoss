@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
 @endsection
 @section('content')
-<div class="container">
+<div class="container pt-5">
 
 
 
@@ -17,7 +17,7 @@
     </button>
 </div>
 
-<a href="{{url('generos/create')}}">Nuevo Genero</a>
+<a class="btn btn-outline-primary" href="{{url('generos/create')}}">Nuevo Genero</a>
 
 <table  id="genero"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
@@ -34,17 +34,17 @@
             <td>{{$genero->nombregenero}}</td>
             <td>
                 
-                <a href="{{url('/generos/'.$genero->id.'/edit')}}">
+                <a class="btn btn-outline-primary" href="{{url('/generos/'.$genero->id.'/edit')}}">
                     editar
                 </a>
                  | 
                 <form action="{{ url('/generos/'.$genero->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
-                <a href="{{url('/generos/'.$genero->id)}}">Detalle</a>
+                <a class="btn btn-outline-primary" href="{{url('/generos/'.$genero->id)}}">Detalle</a>
 
 
 

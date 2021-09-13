@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
 @endsection
 @section('content')
-<div class="container">
+<div class="container pt-5">
 
 
 
@@ -17,7 +17,7 @@
     </button>
 </div>
 
-<a href="{{url('proveedors/create')}}">Nuevo proveedor</a>
+<a class="btn btn-outline-primary" href="{{url('proveedors/create')}}">Nuevo proveedor</a>
 
 <table  id="proveedor"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
@@ -44,17 +44,17 @@
             <td>{{$proveedor->nombreproveedor}}</td>
             <td>
                 
-                <a href="{{url('/proveedors/'.$proveedor->id.'/edit')}}">
+                <a class="btn btn-outline-primary" href="{{url('/proveedors/'.$proveedor->id.'/edit')}}">
                     editar
                 </a>
                  | 
                 <form action="{{ url('/proveedors/'.$proveedor->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
-                <a href="{{url('/proveedors/'.$proveedor->id)}}">Detalles</a>
+                <a class="btn btn-outline-primary" href="{{url('/proveedors/'.$proveedor->id)}}">Detalles</a>
 
 
 
