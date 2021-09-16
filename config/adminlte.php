@@ -243,15 +243,15 @@ return [
         ],
 
         [
-            'text'        => 'Bienvenido',
+            'text'        => 'Inicio',
             'url'         => '/',
             'icon'        => 'fab fa-ello',
 
         ],
         ['header' => 'Opciones'],
         [
-            'text' => 'Paciente',
-            'url'  => '/pacientes',
+            'text' => 'Citas',
+            'url'  => '/citas',
             'icon' => 'far fa-calendar-plus',
         ],
         [
@@ -264,8 +264,8 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text'    => 'Citas',
-                    'url'     => '/citas',
+                    'text'    => 'Pacientes',
+                    'url'     => '/Pacientes',
                     'icon'    =>'far fa-address-book',
                 ],
                 [
