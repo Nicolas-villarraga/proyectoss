@@ -127,9 +127,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-light-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -226,15 +226,7 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
+
 
         // Sidebar items:
         [
@@ -265,7 +257,7 @@ return [
             'submenu' => [
                 [
                     'text'    => 'Pacientes',
-                    'url'     => '/Pacientes',
+                    'url'     => '/pacientes',
                     'icon'    =>'far fa-address-book',
                 ],
                 [
@@ -287,13 +279,13 @@ return [
                 ],
                
                 [
-                    'text'    => 'Genero',
-                    'url'     => '/generos',
+                    'text'    => 'Procesos',
+                    'url'     => '/procesos',
                     'icon'    =>'far fa-address-book',
                 ],
                 [
-                    'text'    => 'Tipo de documentos',
-                    'url'     => '/tipodocumentos',
+                    'text'    => 'Productos',
+                    'url'     => '/productos',
                     'icon'    =>'far fa-address-book',
                 ],
             ],

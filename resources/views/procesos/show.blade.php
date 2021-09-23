@@ -23,7 +23,7 @@
                     <td>{{$proceso->historia->id}}</td>
                 </tr>
             </table>
-            <a class="btn btn-outline-primary" href="/pedidos/">volver</a>
+            <a class="btn btn-outline-primary" href="/procesos/">volver</a>
         </div>
     </div>
 

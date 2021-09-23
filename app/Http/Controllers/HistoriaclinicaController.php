@@ -70,10 +70,11 @@ class HistoriaclinicaController extends Controller
      * @param  \App\Models\Historiaclinica  $historiaclinica
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,$id_Historiaclinia)
     {
         $historiaclinica = Historiaclinica::find($id);
-        return view('historiaclinicas.show',compact('historiaclinica'));
+        $id_Historiaclinia =Proceso::find($id_Historiaclinia);
+        return view('historiaclinicas.show',compact('historiaclinica','id_Historiaclinica'));
     }
 
     /**

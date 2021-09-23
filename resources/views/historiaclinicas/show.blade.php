@@ -24,6 +24,9 @@
                 </tr>
             </table>
             <a class="btn btn-outline-primary" href="/historiaclinicas">volver</a>
+            <a class="btn btn-outline-primary"  href="{{url($proceso->id_Historiaclinica)}}">
+                Procesos
+            </a>
         </div>
     </div>
 

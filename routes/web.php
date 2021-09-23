@@ -14,6 +14,7 @@ use App\Http\Controllers\ProveedorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\TipodocumentoController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,7 @@ Route::resource('pedidos',PedidoController::class);
 Route::resource('productos',ProductoController::class);
 Route::resource('proveedors',ProveedorController::class);
 Route::resource('procesos',ProcesoController::class);
+Route::resource('usuarios', UserController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

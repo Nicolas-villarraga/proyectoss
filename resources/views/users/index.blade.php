@@ -1,76 +1,75 @@
+
 @extends('adminlte::page')
+
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
 @endsection
+
 @section('content')
+
 <div class="container pt-5">
+      <div class="alert alert-success alert-dismissible" role="alert">
+            @if(Session::has('mensaje'))
+            {{Session::get('mensaje')}}
+            @endif
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div> 
 
+<a class="btn btn-outline-primary" href="{{url('usuarios/create')}}">Nuevo Usuario</a>
 
-
-<div class="alert alert-success alert-dismissible" role="alert">
-    @if(Session::has('mensaje'))
-    {{Session::get('mensaje')}}
-    @endif
-    <button type="button" class="close" data-dismiss="alert" aria-label="close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
-
-<a class="btn btn-outline-primary" href="{{url('productos/create')}}">Nuevo producto</a>
-
-<table  id="producto"   class="table table-striped table-bordered" style="width:100%">
+<table id="usuario" class="table table-striped table-bordered" style="width:100%">
+    
+    
     <thead class=" bg-primary text-white">
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Precio Inicial</th>
-            <th>Precio Final</th>
-            <th>Cantidad</th>
-            <th>Acciones</th>
+            <th>Correo</th>
+            <th>Contraseña</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($productos as $producto)
+        
+        @foreach ($usuarios as $usuario)
         <tr>
-            <td>{{$producto->id}}</td>
-            <td>{{$producto->nombreproducto}}</td>
-            <td>{{$producto->descripcionproducto}}</td>
-            <td>{{$producto->preciocompra}}</td>
-            <td>{{$producto->precioventa}}</td>
-            <td>{{$producto->cantidadproducto}}</td>
+            <td>{{$usuario->id}}</td>
+            <td>{{$usuario->name}}</td>
+            <td>{{$usuario->email}}</td>
+            <td>{{$usuario->password}}</td>
             <td>
                 
-                <a class="btn btn-outline-primary" href="{{url('/productos/'.$producto->id.'/edit')}}">
+                <a class="btn btn-outline-primary"  href="{{url('/usuarios/'.$usuario->id.'/edit')}}">
                     editar
                 </a>
-                 | 
-                <form action="{{ url('/productos/'.$producto->id ) }}" method="post">
+                <form action="{{ url('/usuarios/'.$usuario->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input  class="btn btn-outline-primary fl-1" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
-                <a class="btn btn-outline-primary" href="{{url('/productos/'.$producto->id)}}">Detalles</a>
-
-
-
+                <a class="btn btn-outline-primary" href="{{url('/usuarios/'.$usuario->id)}}">Detalles</a>
             </td>
         </tr>
-        @endforeach
+        
+        @endforeach 
+         
     </tbody>
-    @section('js')
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
-    <script>
-        $(document).ready(function() {
-        $('#producto').DataTable({
-            language:idioma_español
-        });
-        } );
-        var idioma_español ={
+    
+</table>
+ @section('js')
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+     <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+     <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
+     <script>
+         $(document).ready(function() {
+         $('#usuario').DataTable({
+             language:idioma_español
+         });
+         } );
+         var idioma_español ={
     "processing": "Procesando...",
     "lengthMenu": "Mostrar _MENU_ registros",
     "zeroRecords": "No se encontraron resultados",
@@ -273,8 +272,9 @@
     },
     "info": "Mostrando _START_ a _END_ de _TOTAL_ registros"
 }
-    </script>
-    @endsection
-</table>
+     </script>
+ @endsection
 </div>
+
 @endsection
+

@@ -11,9 +11,10 @@
     <title>Opticolombia</title>
   </head>
   <body>
-    <h1 class="text-center" >Bienvenidos</h1>
+    
 
     <div class="contenedor">
+      <h1 class="text-center" >Bienvenidos</h1>
         @yield('content')
     </div>
 
