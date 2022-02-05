@@ -16,11 +16,11 @@ class CreateDetallesTable extends Migration
         Schema::create('detalles', function (Blueprint $table) {
             $table->id();
             $table->foreign('id_Producto')->references('id')->on('productos');
-            $table->bigInteger('id_Pedido')->unsigned();
+            $table->bigInteger('id_Producto')->unsigned();
             $table->string('descripcionproducto');
             $table->string('cantidadproducto');
             $table->string('valorproducto');
-            $table->bigInteger('id_Producto')->unsigned();
+            $table->bigInteger('id_Pedido')->unsigned();
             $table->foreign('id_Pedido')->references('id')->on('pedidos');
             $table->timestamps();
         });

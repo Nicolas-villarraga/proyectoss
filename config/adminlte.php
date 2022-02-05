@@ -242,6 +242,11 @@ return [
         ],
         ['header' => 'Opciones'],
         [
+            'text' => 'Usuarios',
+            'url'  => '/usuarios',
+            'icon' => 'far fa-calendar-plus',
+        ],
+        [
             'text' => 'Citas',
             'url'  => '/citas',
             'icon' => 'far fa-calendar-plus',

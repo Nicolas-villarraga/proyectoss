@@ -18,7 +18,7 @@
 </div>
 
 <a class="btn btn-outline-primary" href="{{url('pedidos/create')}}">Nueva Pedido</a>
-
+<br><br>
 <table  id="pedido"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
         <tr>
@@ -39,17 +39,18 @@
             <td>{{$pedido->totalpedido}}</td>
             <td>{{$pedido->observacionespedido}}</td>
             <td>
-                <a class="btn btn-outline-primary" href="{{url('/pedidos/'.$pedido->id.'/edit')}}">
+                <div class="btn-group">
+                <a class="btn btn-outline-primary col-md-4" href="{{url('/pedidos/'.$pedido->id.'/edit')}}">
                     editar
                 </a>
-                 | 
                 <form action="{{ url('/pedidos/'.$pedido->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary col-md-10 ml-1" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
                 <a class="btn btn-outline-primary" href="{{url('/pedidos/'.$pedido->id)}}">detalle</a>
+            </div>
             </td>
         </tr>
         @endforeach

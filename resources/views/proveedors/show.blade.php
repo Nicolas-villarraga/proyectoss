@@ -3,30 +3,30 @@
 @extends('adminlte::page')
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row pt-4 pl-4">
         <div class="col-mb-4 col-md-offset-4">
             <table>
-                <tr>
+                <tr class="form-control">
                     <td>Nombre</td>
                     <td>{{$proveedor->nombreproveedor}}</td>
                 </tr>
-                <tr>
+                <tr class="form-control">
                     <td>Nit</td>
                     <td>{{$proveedor->nitproveedor}}</td>
                 </tr>
-                <tr>
+                <tr class="form-control">
                     <td>Direccion</td>
                     <td>{{$proveedor->direccionproveedor}}</td>
                 </tr>
-                <tr>
+                <tr class="form-control">
                     <td>Telefono</td>
                     <td>{{$proveedor->telefonoproveedor}}</td>
                 </tr>
-                <tr>
+                <tr class="form-control">
                     <td>Correo</td>
                     <td>{{$proveedor->correoproveedor}}</td>
                 </tr>
-                <tr>
+                <tr class="form-control">
                     <td>Marca</td>
                     <td>{{$proveedor->marcaproveedor}}</td>
                 </tr>

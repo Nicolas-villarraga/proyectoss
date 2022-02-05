@@ -3,18 +3,18 @@
 @extends('adminlte::page')
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row pt-4 pl-4">
         <div class="col-mb-4 col-md-offset-4">
             <table>
-                <tr>
+                <tr class="form-control">
                     <td>Nombre</td>
                     <td>{{$usuarios->name}}</td>
                 </tr>
-                <tr>
+                <tr class="form-control">
                     <td>Correo</td>
                     <td>{{$usuarios->email}}</td>
                 </tr>
-                <tr>
+                <tr class="form-control">
                     <td>Contraseña</td>
                     <td>{{$usuarios->password}}</td>
                 </tr>

@@ -3,10 +3,10 @@
 @extends('adminlte::page')
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row pt-4 pl-4">
         <div class="col-mb-4 col-md-offset-4">
             <table>
-                <tr>
+                <tr class="form-control">
                     <td>Estado:</td>
                     <td>{{$estado->nombreestado}}</td>
                 </tr>

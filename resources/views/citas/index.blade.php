@@ -19,7 +19,7 @@
         </div> 
 
 <a class="btn btn-outline-primary" href="{{url('citas/create')}}">Nueva cita</a>
-<br>
+<br><br>
 <table id="cita" class="table table-striped table-bordered" style="width:100%">
     
     
@@ -44,17 +44,18 @@
             <td>{{$cita->Paciente->nombrepaciente}}</td>
             
             <td>
-                
-                <a class="btn btn-outline-primary"  href="{{url('/citas/'.$cita->id.'/edit')}}">
+                <div class="btn-group">
+                <a class="btn btn-outline-primary col-md-4"  href="{{url('/citas/'.$cita->id.'/edit')}}">
                     editar
                 </a>
                 <form action="{{ url('/citas/'.$cita->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input  class="btn btn-outline-primary fl-1" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input  class="btn btn-outline-primary col-md-10 ml-2" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
                 <a class="btn btn-outline-primary" href="{{url('/citas/'.$cita->id)}}">Detalles</a>
+            </div>
             </td>
         </tr>
         

@@ -1,6 +1,3 @@
-
-<h2>formulario de edicion
-</h2>
 @extends('adminlte::page')
 
 @section('content')
@@ -11,7 +8,7 @@
 
 @method('PATCH')
 
-@include('citas.form',['modo'=>'Modificar']);
+@include('users.form',['modo'=>'Modificar']);
 </form>
 </div>    
 @endsection

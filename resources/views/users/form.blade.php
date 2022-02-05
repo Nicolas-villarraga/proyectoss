@@ -17,8 +17,8 @@
 
 @endif
 
-<label for="name">nombre</label>
-<input type="name" name="name" value="{{ isset($usuario->name)?$usuario->name:old('name')}}"id="name">
+<label for="name">Nombre</label>
+<input type="text" name="name" value="{{ isset($usuario->name)?$usuario->name:old('name')}}"id="name">
 <br>
 <label for="email">Correo</label>
 <input type="email" name="email" value="{{ isset($usuario->email)?$usuario->email:old('email')}}"id="email">

@@ -18,7 +18,7 @@
 </div>
 
 <a class="btn btn-outline-primary" href="{{url('generos/create')}}">Nuevo Genero</a>
-
+<br><br>
 <table  id="genero"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
         <tr>
@@ -33,19 +33,18 @@
             <td>{{$genero->id}}</td>
             <td>{{$genero->nombregenero}}</td>
             <td>
-                
-                <a class="btn btn-outline-primary" href="{{url('/generos/'.$genero->id.'/edit')}}">
+                <div class="btn-group">
+                <a class="btn btn-outline-primary col-md-4" href="{{url('/generos/'.$genero->id.'/edit')}}">
                     editar
                 </a>
-                 | 
                 <form action="{{ url('/generos/'.$genero->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary col-md-10 ml-1 " type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
                 <a class="btn btn-outline-primary" href="{{url('/generos/'.$genero->id)}}">Detalle</a>
-
+            </div>
 
 
             </td>

@@ -18,7 +18,7 @@
 </div>
 
 <a class="btn btn-outline-primary" href="{{url('rols/create')}}">Nuevo rol</a>
-
+<br><br>
 <table  id="rol"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
         <tr>
@@ -33,18 +33,19 @@
             <td>{{$rol->id}}</td>
             <td>{{$rol->nombrerol}}</td>
             <td>
-                
-                <a class="btn btn-outline-primary" href="{{url('/rols/'.$rol->id.'/edit')}}">
+             <div class="btn-group">   
+                <a class="btn btn-outline-primary col-md-4" href="{{url('/rols/'.$rol->id.'/edit')}}">
                     editar
                 </a>
                  | 
                 <form action="{{ url('/rols/'.$rol->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary col-md-10" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
                 <a class="btn btn-outline-primary" href="{{url('/rols/'.$rol->id)}}">Detalles</a>
+            </div>
             </td>
         </tr>
         @endforeach

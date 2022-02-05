@@ -16,7 +16,7 @@
 </div>
 
 <a  class="btn btn-outline-primary"  href="{{url('pacientes/create')}}">Nuevo paciente</a>
-
+<br><br>
 <table  id="paciente"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
         <tr>
@@ -25,8 +25,6 @@
             <th>Apellidos</th>
             <th>Tipodocumento</th>
             <th>Documento</th>
-            <th>Telefono</th>
-            <th>Acudiente</th>
             <th>Correo</th>
             <th>Acciones</th>
         </tr>
@@ -39,26 +37,23 @@
             <td>{{$paciente->apellidopaciente}}</td>
             <td>{{$paciente->tipodocumento->nombredocumento}}</td>
             <td>{{$paciente->documentopaciente}}</td>
-            <td>{{$paciente->telefonopaciente}}</td>
-            <td>{{$paciente->acudientepaciente}}</td>
             <td>{{$paciente->correopaciente}}</td>
             <td>
-                
-                <a class="btn btn-outline-primary" href="{{url('/pacientes/'.$paciente->id.'/edit')}}">
+                <div class="btn-group">
+                <a class="btn btn-outline-primary col-md-4" href="{{url('/pacientes/'.$paciente->id.'/edit')}}">
                     editar
                 </a>
-                 | 
                 <form action="{{ url('/pacientes/'.$paciente->id) }}" method="post">
                 @csrf
                 @method('DELETE') 
-                <input class="btn btn-outline-primary" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input class="btn btn-outline-primary col-md-10 ml-1" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
                 
                 <a class="btn btn-outline-primary" href="{{url('/pacientes/'.$paciente->id)}}">
                 Detalles
                 </a>
-
+            </div>
 
               
 

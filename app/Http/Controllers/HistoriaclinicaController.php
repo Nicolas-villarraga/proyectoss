@@ -70,11 +70,10 @@ class HistoriaclinicaController extends Controller
      * @param  \App\Models\Historiaclinica  $historiaclinica
      * @return \Illuminate\Http\Response
      */
-    public function show($id,$id_Historiaclinia)
+    public function show($id)
     {
         $historiaclinica = Historiaclinica::find($id);
-        $id_Historiaclinia =Proceso::find($id_Historiaclinia);
-        return view('historiaclinicas.show',compact('historiaclinica','id_Historiaclinica'));
+        return view('historiaclinicas.show',compact('historiaclinica'));
     }
 
     /**
@@ -89,7 +88,7 @@ class HistoriaclinicaController extends Controller
         $historiaclinica = Historiaclinica::findOrFail($id);
         $doctores=Doctor::all();
         $pacientes = Paciente::all();
-        return view('historiaclinicas.edit',compact('historiaclinica','doctores','pacientes'));
+        return view('historiaclinicas.edit',compact('historiaclinica'));
     }
 
     /**

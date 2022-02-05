@@ -18,9 +18,9 @@
             </button>
         </div> 
 
-<a class="btn btn-outline-primary" href="{{url('usuarios/create')}}">Nuevo Usuario</a>
-
-<table id="usuario" class="table table-striped table-bordered" style="width:100%">
+<a class="btn btn-outline-primary " href="{{url('usuarios/create')}}">Nuevo Usuario</a>
+<br><br>
+<table id="usuario" class="table table-striped table-bordered mt-6" style="width:100%">
     
     
     <thead class=" bg-primary text-white">
@@ -29,6 +29,7 @@
             <th>Nombre</th>
             <th>Correo</th>
             <th>Contraseña</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -40,17 +41,18 @@
             <td>{{$usuario->email}}</td>
             <td>{{$usuario->password}}</td>
             <td>
-                
-                <a class="btn btn-outline-primary"  href="{{url('/usuarios/'.$usuario->id.'/edit')}}">
+                <div class="btn-group">
+                <a class="btn btn-outline-primary col-md-4"  href="{{url('/usuarios/'.$usuario->id.'/edit')}}">
                     editar
                 </a>
                 <form action="{{ url('/usuarios/'.$usuario->id ) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input  class="btn btn-outline-primary fl-1" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
+                <input  class="btn btn-outline-primary col-md-10 ml-2" type="submit" onclick="return confirm('¿Deseas eleminar permanentemente?')" 
                 value="borrar">
                 </form>
                 <a class="btn btn-outline-primary" href="{{url('/usuarios/'.$usuario->id)}}">Detalles</a>
+            </div>
             </td>
         </tr>
         
