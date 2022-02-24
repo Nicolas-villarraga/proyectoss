@@ -15,6 +15,14 @@
                     <td>{{$pedido->horapedido}}</td>
                 </tr>
                 <tr class="form-control">
+                    <td>Razon social</td>
+                    <td>{{$pedido->razonsocialpedido}}</td>
+                </tr>
+                <tr class="form-control">
+                    <td>Detalle Pedido</td>
+                    <td>{{$pedido->detallepedido}}</td>
+                </tr>
+                <tr class="form-control">
                     <td>Total</td>
                     <td>{{$pedido->totalpedido}}</td>
                 </tr>
