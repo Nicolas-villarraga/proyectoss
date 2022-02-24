@@ -23,7 +23,7 @@
             <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
              
             </svg>
-            Opticolombia
+            OPTICOLOMBIA
           </a>
         </div>
         <div class="block lg:hidden pr-4">

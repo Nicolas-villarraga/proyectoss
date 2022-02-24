@@ -19,8 +19,11 @@
         </div> 
 
 <a class="btn btn-outline-primary " href="{{url('usuarios/create')}}">Nuevo Usuario</a>
+<button id="btnExportar" class="btn btn-success">
+    <i class="fas fa-file-excel"></i> Exportar-Excel
+</button>
 <br><br>
-<table id="usuario" class="table table-striped table-bordered mt-6" style="width:100%">
+<table id="tabla" class="table table-striped table-bordered mt-6" style="width:100%">
     
     
     <thead class=" bg-primary text-white">
@@ -52,6 +55,7 @@
                 value="borrar">
                 </form>
                 <a class="btn btn-outline-primary" href="{{url('/usuarios/'.$usuario->id)}}">Detalles</a>
+                
             </div>
             </td>
         </tr>
@@ -65,6 +69,27 @@
      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
      <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
      <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
+     <!-- links para exportar a excel -->
+    <script src="https://unpkg.com/xlsx@0.16.9/dist/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+    <script>
+        const $btnExportar = document.querySelector("#btnExportar"),
+            $tabla = document.querySelector("#tabla");
+    
+        $btnExportar.addEventListener("click", function() {
+            let tableExport = new TableExport($tabla, {
+               exportButtons:false,
+                filename: "Reporte de prueba", //Nombre del archivo de Excel
+                sheetname: "Reporte de prueba", //Título de la hoja
+            });
+            let datos = tableExport.getExportData();
+            let preferenciasDocumento = datos.tabla.xlsx;
+            tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
+        });
+    </script>
+ 
+     
      <script>
          $(document).ready(function() {
          $('#usuario').DataTable({

@@ -17,6 +17,8 @@ class CreatePedidosTable extends Migration
             $table->id();
             $table->string('fechapedido');
             $table->string('horapedido');
+            $table->string('detallepedido');
+            $table->string('razonsocialpedido');
             $table->string('totalpedido');
             $table->string('observacionespedido');
             $table->bigInteger('id_Paciente')->unsigned();

@@ -17,7 +17,7 @@
     </button>
 </div>
 
-<a class="btn btn-outline-primary" href="{{url('pedidos/create')}}">Nueva Pedido</a>
+<a class="btn btn-outline-primary" href="{{url('pedidos/create')}}">Nuevo Pedido</a>
 <br><br>
 <table  id="pedido"   class="table table-striped table-bordered" style="width:100%">
     <thead class=" bg-primary text-white">
@@ -25,6 +25,8 @@
             <th>ID</th>
             <th>Fecha</th>
             <th>Hora</th>
+            <th>Razon social</th>
+            <th>Detalle Pedido</th>
             <th>Total</th>
             <th>Observacion</th>
             <th>Acciones</th>
@@ -36,6 +38,8 @@
             <td>{{$pedido->id}}</td>
             <td>{{$pedido->fechapedido}}</td>
             <td>{{$pedido->horapedido}}</td>
+            <td>{{$pedido->razonsocialpedido}}</td>
+            <td>{{$pedido->detallepedido}}</td>
             <td>{{$pedido->totalpedido}}</td>
             <td>{{$pedido->observacionespedido}}</td>
             <td>

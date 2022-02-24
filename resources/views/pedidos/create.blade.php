@@ -8,7 +8,7 @@
 <form action="{{url('/pedidos')}}" method="post" enctype="multipart/form-data">
 @csrf
     
-@include('pedidos.form',['modo'=>'Confirmar']);
+@include('pedidos.form',['modo'=>'Confirmar'])
 </form>
 </div>    
 @endsection

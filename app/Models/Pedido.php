@@ -12,6 +12,8 @@ class Pedido extends Model
     protected $fillable =[
         'fechapedido',
         'horapedido',
+        'razosocialpedido',
+        'detallepedido',
         'totalpedido',
         'observacionespedido',
         'id_Paciente',
