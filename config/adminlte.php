@@ -278,7 +278,6 @@ return [
                     'url'     => 'detalles',
                     'icon'    =>'fas fa-edit',
                 ],
-               
                 [
                     'text'    => 'Procesos',
                     'url'     => '/procesos',
