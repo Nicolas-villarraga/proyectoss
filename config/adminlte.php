@@ -274,18 +274,6 @@ return [
                     'icon'    =>'far fa-address-book',
                 ],
                 [
-                    'text'    => 'Pedidos',
-                    'url'     => '/pedidos',
-                    'icon'    =>'fas fa-cash-register',
-                
-                ],
-                [
-                    'text'    => 'Proveedores',
-                    'url'     => '/proveedors',
-                    'icon'    =>'fas fa-diagnoses',
-                ],
-               
-                [
                     'text'    => 'Detalles',
                     'url'     => 'detalles',
                     'icon'    =>'fas fa-edit',
@@ -294,11 +282,6 @@ return [
                 [
                     'text'    => 'Procesos',
                     'url'     => '/procesos',
-                    'icon'    =>'far fa-address-book',
-                ],
-                [
-                    'text'    => 'Productos',
-                    'url'     => '/productos',
                     'icon'    =>'far fa-address-book',
                 ],
             ],
