@@ -1,6 +1,5 @@
 <?php
 use App\Http\Controllers\CitaController;
-use App\Http\Controllers\DetalleController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\EstadoController;

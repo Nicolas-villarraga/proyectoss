@@ -274,9 +274,9 @@ return [
                     'icon'    =>'far fa-address-book',
                 ],
                 [
-                    'text'    => 'Detalles',
-                    'url'     => 'detalles',
-                    'icon'    =>'fas fa-edit',
+                    'text'    => 'Doctores',
+                    'url'     => '/doctors',
+                    'icon'    =>'far fa-address-book',
                 ],
                 [
                     'text'    => 'Procesos',

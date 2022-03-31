@@ -23,7 +23,7 @@
 <table id="cita" class="table table-striped table-bordered" style="width:100%">
     
     
-    <thead class=" bg-primary text-white">
+    <thead class="pd-1 bg-primary text-white ">
         <tr>
             <th>ID</th>
             <th>fecha</th>

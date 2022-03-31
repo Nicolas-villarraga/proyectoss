@@ -9,7 +9,7 @@
 @section('content')
 
 <div class="container pt-5">
-      <div class="alert alert-success alert-dismissible" role="alert">
+<div class="alert alert-success alert-dismissible" role="alert">
             @if(Session::has('mensaje'))
             {{Session::get('mensaje')}}
             @endif
