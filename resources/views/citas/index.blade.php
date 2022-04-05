@@ -281,8 +281,7 @@
      </script>
  @endsection
 
-<a class="btn btn-outline-primary" href="{{url('/detalles/')}}">Detalle de Pedidos</a>
-</div>
+
 
 @endsection
 

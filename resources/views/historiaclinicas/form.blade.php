@@ -1,4 +1,3 @@
-
 <h2>{{$modo}} historiaclinica</h2>
 
 
